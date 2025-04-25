@@ -7,26 +7,26 @@
 ------------------
 ## اعادة تشغيل الحاوية
 ----------------
-<pre><code>```docker start mon-cassandra```</code></pre>
+<pre><code>docker start mon-cassandra </code></pre>
 -----------------
 ## الدخول إلى واجهة أوامر Cassandra (cqlsh)
 -------------
-<pre><code>```docker exec -it mon-cassandra cqlsh```</code></pre>
+<pre><code>docker exec -it mon-cassandra cqlsh</code></pre>
 ----------------
 ## إنشاء قاعدة البيانات (Keyspace)
 --------------
 داخل cqlsh:
 ----------
-<pre><code>```CREATE KEYSPACE IF NOT EXISTS resto_ny 
+<pre><code>CREATE KEYSPACE IF NOT EXISTS resto_ny 
 WITH REPLICATION = { 'class': 'SimpleStrategy', 'replication_factor': 1 };
 
-USE resto_ny;```</code></pre>
+USE resto_ny;</code></pre>
 -----------------
 ## إنشاء جدول 
 -----------
 جدول Restaurant:
 ------------
-<pre><code>```CREATE TABLE Restaurant (
+<pre><code>CREATE TABLE Restaurant (
     id text PRIMARY KEY,
     name text,
     borough text,
@@ -35,11 +35,11 @@ USE resto_ny;```</code></pre>
     zipcode text,
     phone text,
     cuisinetype text
-);```</code></pre>
+);</code></pre>
 --------------
 جدول Inspection:
 -------------
-<pre><code>```CREATE TABLE Inspection (
+<pre><code>CREATE TABLE Inspection (
     idrestaurant text,
     inspectiondate text,
     violationcode text,
@@ -48,12 +48,12 @@ USE resto_ny;```</code></pre>
     score text,
     grade text,
     PRIMARY KEY (idrestaurant, inspectiondate)
-);```</code></pre>
+);</code></pre>
 ----------------
 ##استيراد ملفات CSV إلى داخل الحاوية
 -------------
-<pre><code>```docker cp "C:\Users\LAPTA\Downloads\restaurants\restaurants.csv" mon-cassandra:/restaurants.csv
-docker cp "C:\Users\LAPTA\Downloads\restaurants\restaurants_inspections.csv" mon-cassandra:/restaurants_inspections.csv```</code></pre>
+<pre><code>docker cp "C:\Users\LAPTA\Downloads\restaurants\restaurants.csv" mon-cassandra:/restaurants.csv
+docker cp "C:\Users\LAPTA\Downloads\restaurants\restaurants_inspections.csv" mon-cassandra:/restaurants_inspections.csv</code></pre>
 --------------
 ## View 5 restaurants:
 ---------------
