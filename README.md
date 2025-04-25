@@ -72,4 +72,5 @@ docker cp "C:\Users\LAPTA\Downloads\restaurants\restaurants_inspections.csv" mon
 -------------
 ## Count total inspections:
 -------------
-![4](https://github.com/user-attachments/assets/696a84bb-1204-4f1a-98bd-f457237971bf)
+![4](https://github.com/user-attachments/assets/3aa5a906-18af-4810-955e-bd9c0cfb0a33)
+
