@@ -3,7 +3,7 @@
 ----------
 ## تشغيل cassandra في دوكر 
 ----------
-<pre><code>```docker run --name mon-cassandra -d -p 9042:9042 cassandra```</code></pre>
+<pre><code>docker run --name mon-cassandra -d -p 9042:9042 cassandra</code></pre>
 ------------------
 ## اعادة تشغيل الحاوية
 ----------------
